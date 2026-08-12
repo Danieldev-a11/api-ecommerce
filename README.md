@@ -29,84 +29,22 @@ Principais métodos utilizados:
 ### JSON
 Formato utilizado para enviar e receber dados entre o cliente e a API.
 
-Exemplo:
-
-```json
-{
-  "name": "João",
-  "email": "joao@email.com"
-}
-
-
-
-
-
 Controllers
 Responsáveis por receber as requisições e executar as ações da API.
-Exemplo:
-CustomersController → gerenciamento de clientes
-OrdersController → gerenciamento de pedidos
+
 Models
-Representam os dados utilizados pela aplicação.
-Exemplo:
-Customer → representa um cliente
-Order → representa um pedido
+Representam os dados utilizados pela aplicação, como clientes e pedidos.
 Docker
-Utilizado para criar e executar a aplicação dentro de um container, facilitando a execução do projeto em diferentes ambientes.
+Ferramenta utilizada para executar a aplicação dentro de containers.
 
+Funcionamento
+O cliente envia uma requisição para a API. A API recebe essa requisição e encaminha para o Controller responsável. O sistema processa a informação e retorna uma resposta para o cliente.
 
-📁 Estrutura do projeto
+Clientes
+A API permite criar clientes, consultar clientes e buscar um cliente pelo ID.
 
+Pedidos
+A API permite criar pedidos, consultar pedidos e relacionar pedidos aos clientes.
 
-api_ecommerce/
-│
-├── Controllers/
-│   ├── CustomersController.cs
-│   └── OrdersController.cs
-│
-├── Models/
-│   ├── Customer.cs
-│   └── Order.cs
-│
-├── Program.cs
-├── appsettings.json
-├── Dockerfile
-└── README.md
-
-
-🔄 Como a API funciona
-O cliente envia uma requisição HTTP para a API.
-
-
-Cliente
-   ↓
-API
-   ↓
-Controller
-   ↓
-Sistema / Regras da aplicação
-   ↓
-Banco de dados
-
-
-
-API recebe os dados, o Controller identifica qual operação deve ser realizada e a aplicação processa a solicitação.
-
-
-
-👤 Clientes
-A API permite:
-Criar clientes
-Consultar clientes
-Buscar um cliente pelo ID
-
-📦 Pedidos
-A API permite:
-Criar pedidos
-Consultar pedidos
-Associar um pedido a um cliente
-Informar o produto e a quantidade
-Controlar o status do pedido
-
-🚀 Objetivo do projeto
-Este projeto foi desenvolvido para praticar a criação de APIs REST utilizando C#, ASP.NET Core, Controllers, Models, HTTP e JSON.
+Objetivo
+O objetivo deste projeto é praticar o desenvolvimento de APIs REST utilizando C#, ASP.NET Core, HTTP, JSON, Controllers e Models.
